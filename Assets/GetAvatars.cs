@@ -17,7 +17,6 @@ public class GetAvatars : MonoBehaviour
     {
         using (UnityWebRequest webRequest = UnityWebRequest.Get("http://192.168.56.101/list.php"))
         {
-            PlayerSettings.InsecureHttpOption.AlwaysAllowed;
             yield return webRequest.SendWebRequest();
 
             switch (webRequest.result)
